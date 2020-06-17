@@ -152,3 +152,6 @@
 /Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/AuthSystem.dll
 /Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/AuthSystem.pdb
 /Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/AuthSystem.genruntimeconfig.cache
+/Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
+/Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
+/Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs

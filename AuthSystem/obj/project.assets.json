@@ -8592,7 +8592,7 @@
       "outputPath": "/Users/bonniezheng/Documents/PersonalProjects/ASP.NET/AuthSystem/AuthSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bonniezheng/.config/NuGet/NuGet.Config"
+        "/Users/bonniezheng/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

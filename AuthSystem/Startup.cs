@@ -33,6 +33,7 @@ namespace AuthSystem
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //app.UseDatabaseErrorPage();
             }
             else
             {
@@ -53,6 +54,7 @@ namespace AuthSystem
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages(); // step 3
             });
         }
     }
