@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{EF48F083-43CC-4748-AC2B-B11CF76D1728}|Default">
+  <MonoDevelop.Ide.ItemProperties.AuthSystem PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AuthSystem/appsettings.json">
+    <Files>
+      <File FileName="AuthSystem/AuthSystem.csproj" Line="4" Column="35" />
+      <File FileName="AuthSystem/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="AuthSystem/Views/Shared/_Layout.cshtml" Line="23" Column="17" />
+      <File FileName="AuthSystem/Areas/Identity/Data/AuthSystemIdentityDbContext.cs" Line="1" Column="1" />
+      <File FileName="AuthSystem/Areas/Identity/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="AuthSystem/Areas/Identity/IdentityHostingStartup.cs" Line="1" Column="1" />
+      <File FileName="AuthSystem/Startup.cs" Line="8" Column="25" />
+      <File FileName="AuthSystem/ScaffoldingReadMe.txt" Line="1" Column="1" />
+      <File FileName="AuthSystem/Program.cs" Line="1" Column="1" />
+      <File FileName="AuthSystem/appsettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AuthSystem" expanded="True">
+            <Node name="AuthSystem" expanded="True" selected="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

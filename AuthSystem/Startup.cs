@@ -24,6 +24,7 @@ namespace AuthSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages(); // step 1
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,7 @@ namespace AuthSystem
 
             app.UseRouting();
 
+            app.UseAuthentication(); // step 2
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
