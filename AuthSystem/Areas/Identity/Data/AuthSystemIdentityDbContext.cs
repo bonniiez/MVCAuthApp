@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AuthSystem.Areas.Identity.Data
 {
-    public class AuthSystemIdentityDbContext : IdentityDbContext<IdentityUser>
+    public class AuthSystemIdentityDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
         public AuthSystemIdentityDbContext(DbContextOptions<AuthSystemIdentityDbContext> options)
             : base(options)

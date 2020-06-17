@@ -19,7 +19,7 @@ namespace AuthSystem.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthSystemIdentityDbContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<IdentityUser<Guid>>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<AuthSystemIdentityDbContext>();
             });
         }
