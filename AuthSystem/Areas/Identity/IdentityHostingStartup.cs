@@ -16,7 +16,7 @@ namespace AuthSystem.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<AuthSystemIdentityDbContext>(options =>
-                    options.UseSqlServer(
+                    options.UseMySQL(
                         context.Configuration.GetConnectionString("AuthSystemIdentityDbContextConnection")));
 
                 services.AddDefaultIdentity<IdentityUser<Guid>>(options => options.SignIn.RequireConfirmedAccount = true)
