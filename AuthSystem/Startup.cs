@@ -25,6 +25,9 @@ namespace AuthSystem
         {
             services.AddControllersWithViews();
             services.AddRazorPages(); // step 1
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();// mvc page refresh after changes
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
