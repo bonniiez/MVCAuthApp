@@ -2,39 +2,36 @@
 
 @{
     //Layout = null;
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add or Edit";
 
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
 
-<h4>Employee</h4>
+
+<h4>Employee Form</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-6">
+        <form asp-action="AddOrEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FullName" class="control-label"></label>
                 <input asp-for="FullName" class="form-control" />
                 <span asp-validation-for="FullName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="EmployeeCode" class="control-label"></label>
-                <input asp-for="EmployeeCode" class="form-control" />
-                <span asp-validation-for="EmployeeCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Position" class="control-label"></label>
-                <input asp-for="Position" class="form-control" />
-                <span asp-validation-for="Position" class="text-danger"></span>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="EmployeeCode" class="control-label"></label>
+                    <input asp-for="EmployeeCode" class="form-control" />
+                    <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Position" class="control-label"></label>
+                    <input asp-for="Position" class="form-control" />
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="OfficeLocation" class="control-label"></label>
@@ -55,5 +52,3 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-</body>
-</html>

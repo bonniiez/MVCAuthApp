@@ -30,7 +30,9 @@ namespace AuthSystem
         {
             services.AddControllersWithViews();
             services.AddRazorPages(); // step 1
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();// mvc page refresh after changes
+            services
+                .AddControllersWithViews()
+                .AddRazorRuntimeCompilation();// mvc page refresh after changes
 
 
             // cookie authentication?

@@ -43,9 +43,9 @@ namespace AuthSystem.Controllers
         }
 
         // GET: Employee/Create
-        public IActionResult Create()
+        public IActionResult AddOrEdit(int id=0)
         {
-            return View();
+            return View(new Employee());
         }
 
         // POST: Employee/Create
