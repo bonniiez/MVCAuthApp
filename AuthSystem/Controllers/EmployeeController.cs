@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AuthSystem.Models;
+using System.Diagnostics;
 
 namespace AuthSystem.Controllers
 {
@@ -58,6 +59,14 @@ namespace AuthSystem.Controllers
         // GET: Employee/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            var employee = await _context.Employees.FindAsync(id);
+            Debug.WriteLine(employee);
+            _context.Employees.Remove(employee);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+
+            /*
             if (id == null)
             {
                 return NotFound();
@@ -69,8 +78,8 @@ namespace AuthSystem.Controllers
             {
                 return NotFound();
             }
-
-            return View(employee);
+            */
+            
         }
 
 
