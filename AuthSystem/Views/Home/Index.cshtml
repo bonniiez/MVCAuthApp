@@ -1,8 +1,17 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@using AuthSystem.Areas.Identity.Data;
+
+@{
     ViewData["Title"] = "Home Page";
 }
+@inject UserManager<ApplicationUser> UserManager
+
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-10">Welcome!</h1>
+
+    <div class="form-group col-md-6">
+        <a asp-action="IndexEmployee" class="btn btn-outline-info"><i class="fa fa-users"></i> View Employee Registery </a>
+    </div>
+
 </div>

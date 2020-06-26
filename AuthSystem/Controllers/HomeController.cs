@@ -25,6 +25,11 @@ namespace AuthSystem.Controllers
             return View();
         }
 
+        public IActionResult IndexEmployee()
+        {
+            return RedirectToAction("Index", "Employee");
+        }
+
         public IActionResult Privacy()
         {
             return View();

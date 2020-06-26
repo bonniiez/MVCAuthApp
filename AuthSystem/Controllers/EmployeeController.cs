@@ -64,21 +64,7 @@ namespace AuthSystem.Controllers
             _context.Employees.Remove(employee);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
-
-            /*
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            */
+            return RedirectToAction(nameof(Index)); 
             
         }
 
