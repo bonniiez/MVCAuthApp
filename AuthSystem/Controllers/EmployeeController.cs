@@ -24,8 +24,31 @@ namespace AuthSystem.Controllers
             return View(await _context.Employees.ToListAsync());
         }
 
-        // GET: Employee/Details/5
-        public async Task<IActionResult> Details(int? id)
+
+        // GET: Employee/Create
+        public IActionResult AddOrEdit(int id=0)
+        {
+            return View(new Employee());
+        }
+
+        // POST: Employee/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddOrEdit([Bind("EmployeeId,FullName,EmployeeCode,Position,OfficeLocation")] Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(employee);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(employee);
+        }
+
+        // GET: Employee/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -42,28 +65,27 @@ namespace AuthSystem.Controllers
             return View(employee);
         }
 
-        // GET: Employee/Create
-        public IActionResult AddOrEdit(int id=0)
-        {
-            return View(new Employee());
-        }
 
-        // POST: Employee/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmployeeId,FullName,EmployeeCode,Position,OfficeLocation")] Employee employee)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(employee);
-        }
+        //// GET: Employee/Details/5
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
+        //    var employee = await _context.Employees
+        //        .FirstOrDefaultAsync(m => m.EmployeeId == id);
+        //    if (employee == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(employee);
+        //}
+
+
+        /*
         // GET: Employee/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -114,25 +136,11 @@ namespace AuthSystem.Controllers
             }
             return View(employee);
         }
+        */
 
-        // GET: Employee/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
 
-            return View(employee);
-        }
-
+        /*
         // POST: Employee/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -148,5 +156,6 @@ namespace AuthSystem.Controllers
         {
             return _context.Employees.Any(e => e.EmployeeId == id);
         }
+        */
     }
 }

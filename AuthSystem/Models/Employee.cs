@@ -9,9 +9,9 @@ namespace AuthSystem.Models
     {
         [Key]
         public int EmployeeId { get; set; }
-        [Column(TypeName ="nvarchar(250)")]
 
-        [Required]
+        [Column(TypeName ="nvarchar(250)")]
+        [Required(ErrorMessage ="This field is required. ")]
         [DisplayName("Full Name")]
         public string FullName { get; set; }
 
