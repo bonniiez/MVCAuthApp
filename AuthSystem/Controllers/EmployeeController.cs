@@ -28,7 +28,10 @@ namespace AuthSystem.Controllers
         // GET: Employee/Create
         public IActionResult AddOrEdit(int id=0)
         {
-            return View(new Employee());
+            if (id == 0)
+                return View(new Employee());
+            else
+                return View(_context.Employees.Find(id));
         }
 
         // POST: Employee/Create
@@ -40,7 +43,12 @@ namespace AuthSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
+
+                // update operation
+                if (employee.EmployeeId == 0)
+                    _context.Add(employee);
+                else
+                    _context.Update(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
